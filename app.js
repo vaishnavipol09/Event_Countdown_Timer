@@ -7,9 +7,9 @@ function calculate () {
     const date = document.querySelector("#date").value;
     const time = document.querySelector("#time").value;
 
-    const stop = document.querySelector("stop")
+    const stop = document.querySelector("#stop")
     
-    const endTime = new Date(date + "" + time);
+    const endTime = new Date(date + " " + time);
 
     const interval = setInterval(() => calculateTime(endTime), 1000);
 
@@ -31,7 +31,7 @@ function calculateTime(endTime){
 
         console.log(timeLeft)
         days.innerText = Math.floor(timeLeft / (24 * 60 * 60));
-        hours.innerText = Math.floor((timeLeft / (60 * 60)) %24);
+        hours.innerText = Math.floor((timeLeft / (60 * 60)) % 24);
         minutes.innerText = Math.floor((timeLeft / 60) % 60);
         seconds.innerText = Math.floor(timeLeft % 60);
 
